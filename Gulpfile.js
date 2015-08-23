@@ -41,8 +41,8 @@ gulp.task('css', function () {
 });
 
 gulp.task('svg', function () {
-    return gulp.src('assets/*.svg')
+    return gulp.src('design/*.svg')
         .pipe(svgmin())
-        .pipe(gulp.dest('./build/assets'));
+        .pipe(gulp.dest('./lib/assets/svg'));
 });
 
