@@ -17,17 +17,17 @@ var appState = {
                 icon: ''
             },
             {
-                path: 'methods',
-                menuItem: 'Methods',
-                pageTitle: 'FoxLab: Methods',
-                component: 'methods-section',
-                icon: ''
-            },
-            {
                 path: 'feed',
                 menuItem: 'News',
                 pageTitle: 'FoxLab: Feed',
                 component: 'feed-section',
+                icon: ''
+            },
+            {
+                path: 'projects',
+                menuItem: 'Projects',
+                pageTitle: 'FoxLab: Projects',
+                component: 'projects-section',
                 icon: ''
             },
             {
