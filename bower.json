@@ -1,0 +1,26 @@
+{
+  "name": "foxlab.ml",
+  "version": "0.1",
+  "homepage": "https://github.com/GiantSquid/foxlab.ml",
+  "authors": [
+    "Sergey Matiyasevich <foxrandom.com@gmail.com>"
+  ],
+  "description": "FoxLab homepage",
+  "main": "index.html",
+  "keywords": [
+    "foxlab",
+    "polymer",
+    "svg"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.0.0"
+  }
+}
