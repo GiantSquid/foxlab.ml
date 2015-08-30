@@ -9,7 +9,7 @@ var appState = {
                 component: 'homepage-section',
                 icon: '',
                 color: '#000',
-                bgColor: '#ffc43d'
+                bgColor: '#ffaa00'
             },
             {
                 path: 'about',
@@ -17,8 +17,8 @@ var appState = {
                 pageTitle: 'FoxLab: About',
                 component: 'about-section',
                 icon: '',
-                color: '#FFF',
-                bgColor: '#ff0000'
+                color: '#000',
+                bgColor: '#ffaa00'
             },
             {
                 path: 'methods',
@@ -26,8 +26,8 @@ var appState = {
                 pageTitle: 'FoxLab: Methods',
                 component: 'Methods-section',
                 icon: '',
-                color: '#FFF',
-                bgColor: '#00ff00'
+                color: '#000',
+                bgColor: '#ffaa00'
             },
             {
                 path: 'feed',
@@ -35,8 +35,8 @@ var appState = {
                 pageTitle: 'FoxLab: Feed',
                 component: 'feed-section',
                 icon: '',
-                color: '#FFF',
-                bgColor: '#00ff00'
+                color: '#000',
+                bgColor: '#ffaa00'
             },
             {
                 path: 'projects',
@@ -44,8 +44,8 @@ var appState = {
                 pageTitle: 'FoxLab: Projects',
                 component: 'projects-section',
                 icon: '',
-                color: '#FFF',
-                bgColor: '#0000ff'
+                color: '#000',
+                bgColor: '#ffaa00'
             },
             {
                 path: 'error',
@@ -54,7 +54,7 @@ var appState = {
                 component: 'error-section',
                 icon: '',
                 color: '#000',
-                bgColor: '#CCC'
+                bgColor: '#ffaa00'
             }
         ]
     }
