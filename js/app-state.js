@@ -56,6 +56,45 @@ var appState = {
                 color: '#000',
                 bgColor: '#ffaa00'
             }
+        ],
+
+        mainMenu: [
+            {
+                name: 'ABOUT',
+                link: '#/about'
+            },
+            {
+                name: 'METHODS',
+                link: '#/methods'
+            },
+            {
+                name: 'PROJECTS',
+                link: '#/projects'
+            },
+            {
+                name: 'FEED',
+                link: '#/feed'
+            }
         ]
-    }
+    },
+
+    tags: [
+        'UX',
+        'UI',
+        'JavaScript',
+        'Design',
+        'SVG',
+        'Polymer',
+        'HTML5',
+        'CSS3',
+        'VR',
+        '3D',
+        'Hardware',
+        'Consulting',
+        'Investments',
+        'SPA',
+        'Agile',
+        'Mobile',
+        'WebDev'
+    ]
 };

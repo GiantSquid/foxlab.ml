@@ -1,0 +1,14 @@
+<link rel="import" href="../../../bower_components/polymer/polymer.html">
+
+<dom-module id="tags-ui">
+    <template>
+        <link rel="stylesheet" href="tags-ui.css">
+        <div class="tags-ui_field">
+            <template is="dom-repeat" items="{{tags}}">
+                <div class="tags-ui_tag">{{item}}</div>
+            </template>
+        </div>
+    </template>
+</dom-module>
+
+<script src="tags-ui.js"></script>

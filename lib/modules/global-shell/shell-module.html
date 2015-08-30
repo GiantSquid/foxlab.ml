@@ -1,6 +1,7 @@
 <link rel="import" href="../../../bower_components/polymer/polymer.html">
 
 <link rel="import" href="../../../lib/ui/logo/logo-ui.html">
+<link rel="import" href="../../../lib/ui/tags/tags-ui.html">
 
 <dom-module id="shell-module">
     <template>
@@ -10,15 +11,14 @@
             <logo-ui></logo-ui>
 
             <div class="shell-module_menu_items">
-                <a href="#/about">ABOUT</a>
-                <a href="#/methods">METHODS</a>
-                <a href="#/projects">PROJECTS</a>
-                <a href="#/feed">FEED</a>
+                <template is="dom-repeat" items="{{menuItems}}">
+                    <a href="{{item.link}}">{{item.name}}</a>
+                </template>
             </div>
 
             <div class="shell-module_menu_tags">
 
-                Polymer, SVG, JavaScript, HTML5, CSS3, UX, UI, Design, Investments, Consulting, Mobile, VR, Web, 3D, Hardware
+                <tags-ui></tags-ui>
 
             </div>
 

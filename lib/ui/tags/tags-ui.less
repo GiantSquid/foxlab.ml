@@ -1,0 +1,22 @@
+@import '../../../css/vars';
+@import '../../../css/mix';
+
+.tags-ui {
+  &_field {
+
+    line-height: 34px;
+    padding-top: @meshStep * 2;
+
+  }
+
+  &_tag {
+    .active-element;
+    .flex-container(inline-flex, nowrap, center, center);
+    height: 30px;
+    border-radius: 1px;
+    background-color: @color1;
+    color: @color2;
+    padding-left: @uiSidePadding;
+    padding-right: @uiSidePadding;
+  }
+}
