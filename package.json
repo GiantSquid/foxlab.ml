@@ -18,6 +18,6 @@
     "tiny-lr": "0.0.5"
   },
   "scripts": {
-    "public": "git subtree push --prefix build origin gh-pages"
+    "pub": "git subtree push --prefix build origin gh-pages"
   }
 }
