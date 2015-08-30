@@ -1,0 +1,81 @@
+@import "vars";
+
+// Active elements:
+
+.active-element {
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition: @transitionMin;
+}
+
+// Flex containers:
+
+.flex-container(@flexType, @flow, @justify, @align) {
+  display: @flexType;
+  justify-content: @justify;
+  align-items: @align;
+  flex-flow: @flow;
+}
+
+// Fixes:
+
+.box {
+  box-sizing: border-box;
+}
+
+// Media:
+
+.mediaHandler(@type, @rules) {
+
+  & when(@type = mobile) {
+    @media (max-width: @mediaMobile) {@rules();}
+  }
+
+  & when(@type = tablet) {
+    @media (min-width: (@mediaMobile + 1)) and (max-width: @mediaTablet) {@rules();}
+  }
+
+  & when(@type = wide) {
+    @media (min-width: (@mediaTablet + 1)) and (max-width: @mediaWide) {@rules();}
+  }
+
+  & when(@type = extra) {
+    @media (min-width: (@mediaWide + 1)) {@rules();}
+  }
+
+}
+
+// Visibility:
+
+.hidden-element {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+}
+
+// SVG tools:
+
+.svgBgInline(@fileName) {
+
+  background-image: data-uri('image/svg+xml', '@{svgPath}@{fileName}');
+
+}
+
+.svgImage(@fileName) {
+
+  .box;
+  .svgBgInline(@fileName);
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: image-height('@{svgPath}@{fileName}');
+  width: image-width('@{svgPath}@{fileName}');
+  min-height: image-height('@{svgPath}@{fileName}');
+  min-width: image-width('@{svgPath}@{fileName}');
+
+}

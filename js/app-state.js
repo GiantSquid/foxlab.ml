@@ -7,35 +7,54 @@ var appState = {
                 menuItem: 'Homepage',
                 pageTitle: 'FoxLab: Homepage',
                 component: 'homepage-section',
-                icon: ''
+                icon: '',
+                color: '#000',
+                bgColor: '#ffc43d'
             },
             {
                 path: 'about',
                 menuItem: 'About',
                 pageTitle: 'FoxLab: About',
                 component: 'about-section',
-                icon: ''
+                icon: '',
+                color: '#FFF',
+                bgColor: '#ff0000'
+            },
+            {
+                path: 'methods',
+                menuItem: 'Methods',
+                pageTitle: 'FoxLab: Methods',
+                component: 'Methods-section',
+                icon: '',
+                color: '#FFF',
+                bgColor: '#00ff00'
             },
             {
                 path: 'feed',
                 menuItem: 'News',
                 pageTitle: 'FoxLab: Feed',
                 component: 'feed-section',
-                icon: ''
+                icon: '',
+                color: '#FFF',
+                bgColor: '#00ff00'
             },
             {
                 path: 'projects',
                 menuItem: 'Projects',
                 pageTitle: 'FoxLab: Projects',
                 component: 'projects-section',
-                icon: ''
+                icon: '',
+                color: '#FFF',
+                bgColor: '#0000ff'
             },
             {
                 path: 'error',
                 menuItem: 'Error 404',
                 pageTitle: 'FoxLab: 404',
                 component: 'error-section',
-                icon: ''
+                icon: '',
+                color: '#000',
+                bgColor: '#CCC'
             }
         ]
     }
