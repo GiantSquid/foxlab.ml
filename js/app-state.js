@@ -79,8 +79,7 @@ var appState = {
     },
 
     tags: [
-        'UX',
-        'UI',
+        'UX/UI',
         'JavaScript',
         'Design',
         'SVG',
@@ -95,6 +94,9 @@ var appState = {
         'SPA',
         'Agile',
         'Mobile',
-        'WebDev'
+        'WebDev',
+        'Adaptive',
+        'Usability',
+        'WebGL'
     ]
 };

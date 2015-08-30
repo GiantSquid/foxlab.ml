@@ -8,19 +8,18 @@
         <link rel="stylesheet" href="shell-module.css">
         <div class="shell-module_menu">
 
-            <logo-ui></logo-ui>
+            <div>
+                <a href="/"><logo-ui></logo-ui></a>
 
-            <div class="shell-module_menu_items">
-                <template is="dom-repeat" items="{{menuItems}}">
-                    <a href="{{item.link}}">{{item.name}}</a>
-                </template>
+                <div class="shell-module_menu_items">
+                    <template is="dom-repeat" items="{{menuItems}}">
+                        <a href="{{item.link}}">{{item.name}}</a>
+                    </template>
+                </div>
             </div>
 
-            <div class="shell-module_menu_tags">
+            <tags-ui></tags-ui>
 
-                <tags-ui></tags-ui>
-
-            </div>
 
         </div>
     </template>
