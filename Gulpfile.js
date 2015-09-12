@@ -1,13 +1,15 @@
 var gulp = require('gulp');
 var webserver = require('gulp-webserver');
 var vulcanize = require('gulp-vulcanize');
-var postcss = require('gulp-postcss');
-var autoprefixer = require('autoprefixer-core');
-var mqpacker = require('css-mqpacker');
-var csswring = require('csswring');
 var svgmin = require('gulp-svgmin');
+var less = require('gulp-less');
+var watchLess = require('gulp-watch-less');
+var LessPluginCleanCSS = require('less-plugin-clean-css'),
+    LessPluginAutoPrefix = require('less-plugin-autoprefix'),
+    cleancss = new LessPluginCleanCSS({ advanced: true }),
+    autoprefix= new LessPluginAutoPrefix({ browsers: ["last 2 versions"] });
 
-gulp.task('default', function() {
+gulp.task('server', function() {
     gulp.src('')
         .pipe(webserver({
             livereload: false,
@@ -18,26 +20,13 @@ gulp.task('default', function() {
 });
 
 gulp.task('build', function () {
-    var DEST_DIR = 'build';
-
     return gulp.src('index.html')
         .pipe(vulcanize({
-            dest: DEST_DIR,
+            dest: 'build',
             strip: true,
             inline: true
         }))
-        .pipe(gulp.dest(DEST_DIR));
-});
-
-gulp.task('css', function () {
-    var processors = [
-        autoprefixer({browsers: ['last 2 versions']}),
-        mqpacker,
-        csswring
-    ];
-    return gulp.src('**/**/**/*.css')
-        .pipe(postcss(processors))
-        .pipe(gulp.dest('./'));
+        .pipe(gulp.dest('build'));
 });
 
 gulp.task('svg', function () {
@@ -46,3 +35,13 @@ gulp.task('svg', function () {
         .pipe(gulp.dest('./lib/assets/svg'));
 });
 
+gulp.task('watch', function () {
+    return gulp.src('./lib/**/*.less')
+        .pipe(watchLess('./lib/**/*.less'))
+        .pipe(less({
+          plugins: [autoprefix, cleancss]
+        }))
+        .pipe(gulp.dest('./lib'));
+});
+
+gulp.task('default', ['server', 'watch']);

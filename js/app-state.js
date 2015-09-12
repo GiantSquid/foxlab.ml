@@ -97,6 +97,7 @@ var appState = {
         'WebDev',
         'Adaptive',
         'Usability',
-        'WebGL'
+        'WebGL',
+        'Go'
     ]
 };
